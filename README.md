@@ -36,4 +36,7 @@ Then in a browser open:
 `https://<worker-domain>/checkLock`
 
 Which will show that the lock is still held, because the timeout/fetch for the
-canceled request did not resolve or reject, and so the lock was not released.
+cancelled request did not resolve or reject, and so the lock was not released.
+The lock will now be stuck locked until the Durable Object is restarted
+in a different JavaScript Execution Context. This can be forced by slightly
+modifying the code and running `wrangler publish`.

@@ -73,6 +73,7 @@ class GlobalStateTestDO implements DurableObject {
             }, seconds * 1000);
           });
         } else {
+          // url.pathname ==  "/fetchInLock"
           await fetch(`https://hub.dummyapis.com/delay?seconds=${seconds}`);
         }
         console.log(logPrefix, "about to release lock");
