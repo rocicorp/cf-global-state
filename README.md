@@ -8,7 +8,7 @@ can arise from Cloudflare's reuse of JavaScript execution context.
 ```
 npm install
 
-wrangler publish
+npx wrangler publish
 ```
 
 Then in a browser open:
@@ -19,17 +19,17 @@ or
 Then without modifying the code run
 
 ```
-wrangler publish
+npx wrangler publish
 ```
 
 or
 
 ```
-wrangler tail
+npx wrangler tail
 ```
 
 The publish/tail will cause the above sleepInLock/fetchInLock request to be
-cancelled, after 20-30 seconds, and the DO to throw an exception:
+cancelled, and the DO to throw an exception:
 `Durable Object reset because its code was updated.`
 
 Then in a browser open:
