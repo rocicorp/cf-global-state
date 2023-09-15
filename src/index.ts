@@ -37,7 +37,7 @@ class GlobalStateTestDO implements DurableObject {
       this.logPrefix,
       "constructed at",
       Date.now(),
-      " --!!!!!!!!!!!!!!!!!!"
+      " --!!!!!!!!!!!!!!!!!!!!"
     );
   }
   async fetch(request: Request): Promise<Response> {
