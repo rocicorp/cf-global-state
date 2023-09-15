@@ -1,0 +1,13 @@
+name = "cf-global-state-test"
+main = "src/index.ts"
+compatibility_date = "2022-06-03"
+
+[durable_objects]
+bindings = [
+  { name = "globalStateTestDO", class_name = "GlobalStateTestDO" },
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["GlobalStateTestDO"]
+
